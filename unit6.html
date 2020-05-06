@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<input type="text" id="demo" placeholder="Nhập vào 1 số">
+<button onclick="clik()">Nhập</button>
+<script>
+    function clik() {
+        let k = document.getElementById("demo").value;
+        let num = [1,4,7,10,13,16,19,22,25,28,31];
+        for (let i = 0; i < num.length; i++){
+            if (k == num[i]) {
+                alert(k + " is in the array")
+                break;
+            }else {
+                alert(k + " is not in the array")
+                break;
+            }
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

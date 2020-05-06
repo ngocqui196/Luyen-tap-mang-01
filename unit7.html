@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<input type="text" id="demo" placeholder="Nhập vào 1 số">
+<button onclick="removeIndex(+document.getElementById('demo').value)">Nhập</button>
+<script>
+    let arr = [0,1,2,3,4,5];
+    function removeIndex(number) {
+        let num = arr.indexOf(number);
+        for (let i = num; i < arr.length-1; i++) {
+            arr[i] = arr[i+1];
+        }
+        arr[arr.length-1] = 0;
+        console.log(arr);
+    }
+
+</script>
+</body>
+</html>

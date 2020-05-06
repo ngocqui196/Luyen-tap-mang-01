@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let k = 0;
+    let max = 0;
+    let num = [5,12,3,8,14,6,7,11];
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] > max) {
+            max = num[i];
+        }
+        k += num[i];
+    }
+    document.write("Giá trị trung bình các phần tử:" + (k/num.length) + ", số lớn nhất là:" + max)
+</script>
+</body>
+</html>
