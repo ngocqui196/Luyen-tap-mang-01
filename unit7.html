@@ -8,16 +8,26 @@
 <input type="text" id="demo" placeholder="Nhập vào 1 số">
 <button onclick="removeIndex(+document.getElementById('demo').value)">Nhập</button>
 <script>
+    // Cách 1:
     let arr = [0,1,2,3,4,5];
     function removeIndex(number) {
         let num = arr.indexOf(number);
         for (let i = num; i < arr.length-1; i++) {
             arr[i] = arr[i+1];
         }
-        arr[arr.length-1] = 0;
+        // arr[arr.length-1] = 0;
         console.log(arr);
-    }
 
+    }
+    let arr1 = [1,6,3,4,5,6,7,8,9];
+    let a = 6;
+    for (let i = 0; i < arr1.length; i++) {
+        if (a === arr1[i]){
+            arr1.splice(i,1)        // xóa phần tử trong vị trí mảng, i là vị trí bắt đầu, 1 là số lượng phần tử xóa tbắt đầu từ vị trí i
+        }
+    }
+    arr1.push(0);
+    document.write(arr1);
 </script>
 </body>
 </html>

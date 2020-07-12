@@ -6,11 +6,12 @@
 </head>
 <body>
 <script>
+    let arr = [1,5,23,2,7,9,4,3,6];
 
-    let arr = [1,5,2,7,9,4,3,6];
+    // cách 1:
     for (let i = 0; i < arr.length; i++) {
         let index = null;
-        let old = arr[i];
+        let old = 0;
         for (let j = i; j < arr.length; j++) {
             if (old < arr[j]) {
                 old = arr[j];
@@ -19,25 +20,17 @@
         }
 
         if (index != null) {
-            let temp = arr[index];
-            arr[index] = arr[i];
-            arr[i] = temp;
+            let temp = arr[i];
+            arr[i] = arr[index];
+            arr[index] = temp;
         }
-
-        //
-        // for (let j = i; j < arr.length; j++) {
-        //     if (arr[i] > arr[j]) {
-        //         index = arr[j];
-        //         arr[j] = arr[i];
-        //         arr[i] = index;
-        //     }
-        // }
-
-
-
-
     }
-    console.log(arr)
+    console.log(arr);
+    /// cách 2: Dùng hàm sort để sắp xếp 1 mảng theo thứ tự giảm dần:
+
+    arr.sort(function(a, b){return b - a});
+    document.write(arr);
+
 </script>
 </body>
 </html>

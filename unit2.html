@@ -7,13 +7,15 @@
 <body>
 <script>
     let max = 0;
+    let index = 0;
     let num = [1,75,56,48,18,94,67,28,43,45];
     for (let i = 0; i < num.length; i++) {
         if (num[i] > max) {
             max = num[i];
+            index = i;
         }
     }
-    alert("Số lớn nhất trong mảng là:" + max + ".")
+    alert("Số lớn nhất trong mảng là:" + max + "tại vị trí" + index)
 </script>
 </body>
 </html>

@@ -6,21 +6,25 @@
 </head>
 <body>
 <input type="text" id="demo" placeholder="Nhập vào 1 số">
-<button onclick="clik()">Nhập</button>
+<button onclick="clickArray()">Nhập</button>
 <script>
-    function clik() {
-        let k = document.getElementById("demo").value;
-        let num = [1,4,7,10,13,16,19,22,25,28,31];
-        for (let i = 0; i < num.length; i++){
-            if (k == num[i]) {
-                alert(k + " is in the array")
-                break;
-            }else {
-                alert(k + " is not in the array")
-                break;
+    function clickArray() {
+        let k = parseInt(document.getElementById("demo").value);
+        let check = false;
+        let num = [1,4,7,10,13,31,19,22,25,28,31];
+        for (let i = 0;i < num.length; i++) {
+            if (k === num[i]) {
+                check = true;
             }
         }
-
+        if (check){
+            alert(k + "is in the array.")
+        }else{
+            alert(k + " is not in the array.")
+        }
+        // if (k !== num[i]){
+        // alert(k + " is not in the array");
+        // }
     }
 
 
